@@ -29,7 +29,7 @@
     "ecmarkup": "^3.19.0"
   },
   "devDependencies": {
-    "@alrra/travis-scripts": "^2.1.0",
+    "@alrra/travis-scripts": "^3.0.1",
     "jsdom": "^15.0.0"
   }
 }
