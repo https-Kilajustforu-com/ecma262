@@ -1,0 +1,18 @@
+version: 2
+registries:
+  npm-registry-npmjs-org:
+    type: npm-registry
+    url: https://npmjs.org
+    username: "${{secrets.NPM_REGISTRY_NPMJS_ORG_USERNAME}}"
+    password: "${{secrets.NPM_REGISTRY_NPMJS_ORG_PASSWORD}}"
+
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  versioning-strategy: increase-if-necessary
+  registries:
+  - npm-registry-npmjs-org
